@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnf41b21extxu"
+path="res://.godot/imported/hero_super_dash_ready.wav-37a50ef5834625e81b4e7b078d144ccb.sample"
+
+[deps]
+
+source_file="res://audio/Knight/Main/Crystal Dash/hero_super_dash_ready.wav"
+dest_files=["res://.godot/imported/hero_super_dash_ready.wav-37a50ef5834625e81b4e7b078d144ccb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
