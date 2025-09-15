@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2g24l3mml5cd"
-path="res://.godot/imported/hero_mantis_claw.wav-158e10d67c1c1a7e9cfcec97df96b851.sample"
+path="res://.godot/imported/hero_mantis_claw.wav-e51e985481a6627e442587ffc19e6131.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/hero_mantis_claw.wav"
-dest_files=["res://.godot/imported/hero_mantis_claw.wav-158e10d67c1c1a7e9cfcec97df96b851.sample"]
+source_file="res://Audio/Knight/Main/hero_mantis_claw.wav"
+dest_files=["res://.godot/imported/hero_mantis_claw.wav-e51e985481a6627e442587ffc19e6131.sample"]
 
 [params]
 

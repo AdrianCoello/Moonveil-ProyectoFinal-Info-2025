@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cf0bmpie142wn"
-path="res://.godot/imported/hero_run_footsteps_bones.wav-983c7030165e511f74a60c511585fc6f.sample"
+path="res://.godot/imported/hero_run_footsteps_bones.wav-058c1045393b69afe1484d951637daf4.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/Steps/hero_run_footsteps_bones.wav"
-dest_files=["res://.godot/imported/hero_run_footsteps_bones.wav-983c7030165e511f74a60c511585fc6f.sample"]
+source_file="res://Audio/Knight/Main/Steps/hero_run_footsteps_bones.wav"
+dest_files=["res://.godot/imported/hero_run_footsteps_bones.wav-058c1045393b69afe1484d951637daf4.sample"]
 
 [params]
 

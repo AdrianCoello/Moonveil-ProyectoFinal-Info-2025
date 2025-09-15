@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bru1dkxhg4f3t"
-path="res://.godot/imported/hero_super_dash_burst.wav-d1c0cfacb667cc90bf35619eef47037f.sample"
+path="res://.godot/imported/hero_super_dash_burst.wav-4cbc1860149f7f4bcc49f0521b1eb3b1.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/Crystal Dash/hero_super_dash_burst.wav"
-dest_files=["res://.godot/imported/hero_super_dash_burst.wav-d1c0cfacb667cc90bf35619eef47037f.sample"]
+source_file="res://Audio/Knight/Main/Crystal Dash/hero_super_dash_burst.wav"
+dest_files=["res://.godot/imported/hero_super_dash_burst.wav-4cbc1860149f7f4bcc49f0521b1eb3b1.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://3djcrn7mlggh"
-path="res://.godot/imported/hero_run_footsteps_water.wav-525585a259bbaac815d6538c540c00cc.sample"
+path="res://.godot/imported/hero_run_footsteps_water.wav-d8713343f05587d9e92789932c2d9905.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/Steps/hero_run_footsteps_water.wav"
-dest_files=["res://.godot/imported/hero_run_footsteps_water.wav-525585a259bbaac815d6538c540c00cc.sample"]
+source_file="res://Audio/Knight/Main/Steps/hero_run_footsteps_water.wav"
+dest_files=["res://.godot/imported/hero_run_footsteps_water.wav-d8713343f05587d9e92789932c2d9905.sample"]
 
 [params]
 

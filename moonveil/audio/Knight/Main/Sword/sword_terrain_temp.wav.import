@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bm3krbp2vvqt0"
-path="res://.godot/imported/sword_terrain_temp.wav-a073ca5c0ea4a999ae147a2f4d192309.sample"
+path="res://.godot/imported/sword_terrain_temp.wav-3f530a491097cc9d2124cee1c9bd9751.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/Sword/sword_terrain_temp.wav"
-dest_files=["res://.godot/imported/sword_terrain_temp.wav-a073ca5c0ea4a999ae147a2f4d192309.sample"]
+source_file="res://Audio/Knight/Main/Sword/sword_terrain_temp.wav"
+dest_files=["res://.godot/imported/sword_terrain_temp.wav-3f530a491097cc9d2124cee1c9bd9751.sample"]
 
 [params]
 

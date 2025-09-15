@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c31edatx2m5s6"
-path="res://.godot/imported/hero_unsheath.wav-3118200ac39f91ecd1696004230921b5.sample"
+path="res://.godot/imported/hero_unsheath.wav-8f03696ad88fc4e65a9289f602218f81.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_unsheath.wav"
-dest_files=["res://.godot/imported/hero_unsheath.wav-3118200ac39f91ecd1696004230921b5.sample"]
+source_file="res://Audio/Knight/Others/hero_unsheath.wav"
+dest_files=["res://.godot/imported/hero_unsheath.wav-8f03696ad88fc4e65a9289f602218f81.sample"]
 
 [params]
 

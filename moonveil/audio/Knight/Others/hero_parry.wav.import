@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dm7etfg5f2fxq"
-path="res://.godot/imported/hero_parry.wav-c9118ab87332597b304443ffdc3caf14.sample"
+path="res://.godot/imported/hero_parry.wav-fcdfcda28dac04cefaf163896040f774.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_parry.wav"
-dest_files=["res://.godot/imported/hero_parry.wav-c9118ab87332597b304443ffdc3caf14.sample"]
+source_file="res://Audio/Knight/Others/hero_parry.wav"
+dest_files=["res://.godot/imported/hero_parry.wav-fcdfcda28dac04cefaf163896040f774.sample"]
 
 [params]
 

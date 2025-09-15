@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dhpspcai7sa0o"
-path="res://.godot/imported/hero_super_dash_impact_wall.wav-d1daafa8b019af3c4a35460186c3160c.sample"
+path="res://.godot/imported/hero_super_dash_impact_wall.wav-925315e23bfdc78aedd988b22f9c637c.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/Crystal Dash/hero_super_dash_impact_wall.wav"
-dest_files=["res://.godot/imported/hero_super_dash_impact_wall.wav-d1daafa8b019af3c4a35460186c3160c.sample"]
+source_file="res://Audio/Knight/Main/Crystal Dash/hero_super_dash_impact_wall.wav"
+dest_files=["res://.godot/imported/hero_super_dash_impact_wall.wav-925315e23bfdc78aedd988b22f9c637c.sample"]
 
 [params]
 

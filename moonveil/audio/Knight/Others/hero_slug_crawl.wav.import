@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cxcseh5jjsjrp"
-path="res://.godot/imported/hero_slug_crawl.wav-fa226d9c349797d44b5cde0e13692bba.sample"
+path="res://.godot/imported/hero_slug_crawl.wav-f55f7d8a33cf3e979c6b08d51a823178.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_slug_crawl.wav"
-dest_files=["res://.godot/imported/hero_slug_crawl.wav-fa226d9c349797d44b5cde0e13692bba.sample"]
+source_file="res://Audio/Knight/Others/hero_slug_crawl.wav"
+dest_files=["res://.godot/imported/hero_slug_crawl.wav-f55f7d8a33cf3e979c6b08d51a823178.sample"]
 
 [params]
 

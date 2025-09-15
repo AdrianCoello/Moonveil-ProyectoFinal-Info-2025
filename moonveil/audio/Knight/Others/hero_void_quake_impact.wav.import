@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bjyd70vkj5vgu"
-path="res://.godot/imported/hero_void_quake_impact.wav-442ecc9ca3fbe0cd8cf64294e88b6097.sample"
+path="res://.godot/imported/hero_void_quake_impact.wav-2bf5500675df910e28c72e566202c9aa.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_void_quake_impact.wav"
-dest_files=["res://.godot/imported/hero_void_quake_impact.wav-442ecc9ca3fbe0cd8cf64294e88b6097.sample"]
+source_file="res://Audio/Knight/Others/hero_void_quake_impact.wav"
+dest_files=["res://.godot/imported/hero_void_quake_impact.wav-2bf5500675df910e28c72e566202c9aa.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dy4ekppdeklpl"
-path="res://.godot/imported/hero_death_extra_details.wav-ce48e341fe15d8496b1cc5f7472d68ec.sample"
+path="res://.godot/imported/hero_death_extra_details.wav-97da032537c8c06eec9bf6475dc0f9f3.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_death_extra_details.wav"
-dest_files=["res://.godot/imported/hero_death_extra_details.wav-ce48e341fe15d8496b1cc5f7472d68ec.sample"]
+source_file="res://Audio/Knight/Others/hero_death_extra_details.wav"
+dest_files=["res://.godot/imported/hero_death_extra_details.wav-97da032537c8c06eec9bf6475dc0f9f3.sample"]
 
 [params]
 

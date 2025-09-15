@@ -1,0 +1,69 @@
+[gd_scene load_steps=14 format=3 uid="uid://b5bc7ev3ebe1i"]
+
+[ext_resource type="Texture2D" uid="uid://btru0lsxo2mbx" path="res://Hollow Knight Sprites/Knight/Idle/Idle_001.png" id="1_wi0c6"]
+[ext_resource type="Texture2D" uid="uid://cqxynk2djvrk" path="res://Hollow Knight Sprites/Knight/Idle/Idle_000.png" id="2_hp6x6"]
+[ext_resource type="Texture2D" uid="uid://cb3tgric4qqte" path="res://Hollow Knight Sprites/Knight/Idle/Idle_002.png" id="3_3tkgg"]
+[ext_resource type="Texture2D" uid="uid://0n8k273jfkx2" path="res://Hollow Knight Sprites/Knight/Idle/Idle_003.png" id="4_l6ohk"]
+[ext_resource type="Texture2D" uid="uid://cw5x8o6bvls5i" path="res://Hollow Knight Sprites/Knight/Idle/Idle_004.png" id="5_oudfo"]
+[ext_resource type="Texture2D" uid="uid://dbdwyvij4l0u2" path="res://Hollow Knight Sprites/Knight/Idle/Idle_005.png" id="6_d6rpx"]
+[ext_resource type="Texture2D" uid="uid://dq01cydmbuit5" path="res://Hollow Knight Sprites/Knight/Idle/Idle_006.png" id="7_r3kul"]
+[ext_resource type="Texture2D" uid="uid://d6ucobtqqlv4" path="res://Hollow Knight Sprites/Knight/Idle/Idle_007.png" id="8_jatw7"]
+[ext_resource type="Texture2D" uid="uid://duolycxrmq80" path="res://Hollow Knight Sprites/Knight/Idle/Idle_008.png" id="9_rv870"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_efikj"]
+size = Vector2(27, 91)
+
+[sub_resource type="Animation" id="Animation_itxgx"]
+resource_name = "idle"
+loop_mode = 1
+step = 0.111111
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 0.111111, 0.222222, 0.333333, 0.444444, 0.555556, 0.666667, 0.777778, 0.888889),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_hp6x6"), ExtResource("2_hp6x6"), ExtResource("1_wi0c6"), ExtResource("3_3tkgg"), ExtResource("4_l6ohk"), ExtResource("5_oudfo"), ExtResource("6_d6rpx"), ExtResource("7_r3kul"), ExtResource("8_jatw7"), ExtResource("9_rv870")]
+}
+
+[sub_resource type="Animation" id="Animation_cgsek"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_wi0c6")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0pi4m"]
+_data = {
+&"RESET": SubResource("Animation_cgsek"),
+&"idle": SubResource("Animation_itxgx")
+}
+
+[node name="Player" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(200, 284)
+texture = ExtResource("1_wi0c6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(202.5, 323.5)
+shape = SubResource("RectangleShape2D_efikj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player"]
+libraries = {
+&"": SubResource("AnimationLibrary_0pi4m")
+}

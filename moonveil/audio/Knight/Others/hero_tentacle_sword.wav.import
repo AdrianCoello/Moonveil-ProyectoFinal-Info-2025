@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bvb37sv54p8lg"
-path="res://.godot/imported/hero_tentacle_sword.wav-0f32153a20577980a571123c7e803edb.sample"
+path="res://.godot/imported/hero_tentacle_sword.wav-c1285c8635ea0f130109a2f52d06e5db.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_tentacle_sword.wav"
-dest_files=["res://.godot/imported/hero_tentacle_sword.wav-0f32153a20577980a571123c7e803edb.sample"]
+source_file="res://Audio/Knight/Others/hero_tentacle_sword.wav"
+dest_files=["res://.godot/imported/hero_tentacle_sword.wav-c1285c8635ea0f130109a2f52d06e5db.sample"]
 
 [params]
 

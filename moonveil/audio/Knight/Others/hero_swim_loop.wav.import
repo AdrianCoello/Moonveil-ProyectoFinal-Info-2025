@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ct4p5cmsslw6m"
-path="res://.godot/imported/hero_swim_loop.wav-84113b20ef318089680f57d4b8799d53.sample"
+path="res://.godot/imported/hero_swim_loop.wav-4eedf8470992a5c4e9de8db37e1db830.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_swim_loop.wav"
-dest_files=["res://.godot/imported/hero_swim_loop.wav-84113b20ef318089680f57d4b8799d53.sample"]
+source_file="res://Audio/Knight/Others/hero_swim_loop.wav"
+dest_files=["res://.godot/imported/hero_swim_loop.wav-4eedf8470992a5c4e9de8db37e1db830.sample"]
 
 [params]
 

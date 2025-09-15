@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dd1bno8bfcgv6"
-path="res://.godot/imported/hero_dream_nail_short_charge.wav-6faa601603cc632ca87c6db9f0036b43.sample"
+path="res://.godot/imported/hero_dream_nail_short_charge.wav-7d5e50d5611880812d9035ba49de12fe.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_dream_nail_short_charge.wav"
-dest_files=["res://.godot/imported/hero_dream_nail_short_charge.wav-6faa601603cc632ca87c6db9f0036b43.sample"]
+source_file="res://Audio/Knight/Others/hero_dream_nail_short_charge.wav"
+dest_files=["res://.godot/imported/hero_dream_nail_short_charge.wav-7d5e50d5611880812d9035ba49de12fe.sample"]
 
 [params]
 

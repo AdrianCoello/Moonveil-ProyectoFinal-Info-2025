@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://heub856f873j"
-path="res://.godot/imported/hero_shade_dash_charge_pt_1.wav-bdef3434a817feb51e3d2f4bfc68ca84.sample"
+path="res://.godot/imported/hero_shade_dash_charge_pt_1.wav-5499ba59a0692251ff8868ec187ae68e.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_shade_dash_charge_pt_1.wav"
-dest_files=["res://.godot/imported/hero_shade_dash_charge_pt_1.wav-bdef3434a817feb51e3d2f4bfc68ca84.sample"]
+source_file="res://Audio/Knight/Others/hero_shade_dash_charge_pt_1.wav"
+dest_files=["res://.godot/imported/hero_shade_dash_charge_pt_1.wav-5499ba59a0692251ff8868ec187ae68e.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cyp2oi5a35evh"
-path="res://.godot/imported/hero_super_dash_air_brake.wav-07dad75d4a8a2c012644fa8cb2ef23c5.sample"
+path="res://.godot/imported/hero_super_dash_air_brake.wav-214772950b30878185424ff08a7bbea2.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/Crystal Dash/hero_super_dash_air_brake.wav"
-dest_files=["res://.godot/imported/hero_super_dash_air_brake.wav-07dad75d4a8a2c012644fa8cb2ef23c5.sample"]
+source_file="res://Audio/Knight/Main/Crystal Dash/hero_super_dash_air_brake.wav"
+dest_files=["res://.godot/imported/hero_super_dash_air_brake.wav-214772950b30878185424ff08a7bbea2.sample"]
 
 [params]
 

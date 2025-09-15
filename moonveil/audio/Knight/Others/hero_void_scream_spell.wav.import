@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cafoab2m5dv07"
-path="res://.godot/imported/hero_void_scream_spell.wav-5e3241baa72fbd64aedb23c63ba6eb1d.sample"
+path="res://.godot/imported/hero_void_scream_spell.wav-8367729d7700ec88a03451e551fd3b14.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_void_scream_spell.wav"
-dest_files=["res://.godot/imported/hero_void_scream_spell.wav-5e3241baa72fbd64aedb23c63ba6eb1d.sample"]
+source_file="res://Audio/Knight/Others/hero_void_scream_spell.wav"
+dest_files=["res://.godot/imported/hero_void_scream_spell.wav-8367729d7700ec88a03451e551fd3b14.sample"]
 
 [params]
 

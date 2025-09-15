@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b7hxsvokrjnkt"
-path="res://.godot/imported/hero_fluke_bounce_1.wav-194bac4f172f70219615f26df9a3b695.sample"
+path="res://.godot/imported/hero_fluke_bounce_1.wav-5a52727bc696427daa8022b7fee51a91.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_fluke_bounce_1.wav"
-dest_files=["res://.godot/imported/hero_fluke_bounce_1.wav-194bac4f172f70219615f26df9a3b695.sample"]
+source_file="res://Audio/Knight/Others/hero_fluke_bounce_1.wav"
+dest_files=["res://.godot/imported/hero_fluke_bounce_1.wav-5a52727bc696427daa8022b7fee51a91.sample"]
 
 [params]
 

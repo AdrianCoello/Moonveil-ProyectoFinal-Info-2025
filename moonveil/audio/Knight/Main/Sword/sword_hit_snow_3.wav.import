@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cvnp4ctb8g6ne"
-path="res://.godot/imported/sword_hit_snow_3.wav-670496c7286616154b9e009c78b829b1.sample"
+path="res://.godot/imported/sword_hit_snow_3.wav-044802cb32cdba9d495bcc837f07c7b1.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/Sword/sword_hit_snow_3.wav"
-dest_files=["res://.godot/imported/sword_hit_snow_3.wav-670496c7286616154b9e009c78b829b1.sample"]
+source_file="res://Audio/Knight/Main/Sword/sword_hit_snow_3.wav"
+dest_files=["res://.godot/imported/sword_hit_snow_3.wav-044802cb32cdba9d495bcc837f07c7b1.sample"]
 
 [params]
 

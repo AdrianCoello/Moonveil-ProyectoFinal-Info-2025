@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cqkpvm1aix855"
-path="res://.godot/imported/hero_fury_charm_loop.wav-d8e0f91ed661feed4f6229b6ef375410.sample"
+path="res://.godot/imported/hero_fury_charm_loop.wav-d0168a3bf09f29d353d593f4b4981cc4.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_fury_charm_loop.wav"
-dest_files=["res://.godot/imported/hero_fury_charm_loop.wav-d8e0f91ed661feed4f6229b6ef375410.sample"]
+source_file="res://Audio/Knight/Others/hero_fury_charm_loop.wav"
+dest_files=["res://.godot/imported/hero_fury_charm_loop.wav-d0168a3bf09f29d353d593f4b4981cc4.sample"]
 
 [params]
 

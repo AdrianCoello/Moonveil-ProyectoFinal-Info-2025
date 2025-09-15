@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://crqxkvjjburpr"
-path="res://.godot/imported/hero_dung_emit_loop.wav-636c889f7fb41c8f4f8aa576bde82c1b.sample"
+path="res://.godot/imported/hero_dung_emit_loop.wav-3ad5f9875555ccf47d60ad1260bde88e.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_dung_emit_loop.wav"
-dest_files=["res://.godot/imported/hero_dung_emit_loop.wav-636c889f7fb41c8f4f8aa576bde82c1b.sample"]
+source_file="res://Audio/Knight/Others/hero_dung_emit_loop.wav"
+dest_files=["res://.godot/imported/hero_dung_emit_loop.wav-3ad5f9875555ccf47d60ad1260bde88e.sample"]
 
 [params]
 

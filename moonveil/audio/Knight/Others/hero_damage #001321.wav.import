@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://kv2ldlcd5tuf"
-path="res://.godot/imported/hero_damage #001321.wav-29f44d2a3eed92d154eb8c956e6df247.sample"
+path="res://.godot/imported/hero_damage #001321.wav-f9b05dbae29174bd53cff55a44bebb9e.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_damage #001321.wav"
-dest_files=["res://.godot/imported/hero_damage #001321.wav-29f44d2a3eed92d154eb8c956e6df247.sample"]
+source_file="res://Audio/Knight/Others/hero_damage #001321.wav"
+dest_files=["res://.godot/imported/hero_damage #001321.wav-f9b05dbae29174bd53cff55a44bebb9e.sample"]
 
 [params]
 

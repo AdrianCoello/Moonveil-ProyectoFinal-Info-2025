@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bx554740w508b"
-path="res://.godot/imported/hero_falling.wav-88f6bf60fb7e850b833f710897f4e533.sample"
+path="res://.godot/imported/hero_falling.wav-9ae62a3de19337bc014b4df8a3cb7177.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/hero_falling.wav"
-dest_files=["res://.godot/imported/hero_falling.wav-88f6bf60fb7e850b833f710897f4e533.sample"]
+source_file="res://Audio/Knight/Main/hero_falling.wav"
+dest_files=["res://.godot/imported/hero_falling.wav-9ae62a3de19337bc014b4df8a3cb7177.sample"]
 
 [params]
 

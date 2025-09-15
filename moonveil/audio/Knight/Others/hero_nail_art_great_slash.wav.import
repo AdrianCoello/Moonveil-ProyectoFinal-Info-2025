@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ruchn2a7lfmm"
-path="res://.godot/imported/hero_nail_art_great_slash.wav-d35b2ff378ab0738a397008d89183eff.sample"
+path="res://.godot/imported/hero_nail_art_great_slash.wav-c2e4fbd035e7819dae5e049dca6f6dee.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_nail_art_great_slash.wav"
-dest_files=["res://.godot/imported/hero_nail_art_great_slash.wav-d35b2ff378ab0738a397008d89183eff.sample"]
+source_file="res://Audio/Knight/Others/hero_nail_art_great_slash.wav"
+dest_files=["res://.godot/imported/hero_nail_art_great_slash.wav-c2e4fbd035e7819dae5e049dca6f6dee.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ckrkpna5xtc7t"
-path="res://.godot/imported/hero_land_soft.wav-dc79ef956afea5075c03e8fdc3ee7ee6.sample"
+path="res://.godot/imported/hero_land_soft.wav-d26846beda83682b56a333b838cf544d.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/hero_land_soft.wav"
-dest_files=["res://.godot/imported/hero_land_soft.wav-dc79ef956afea5075c03e8fdc3ee7ee6.sample"]
+source_file="res://Audio/Knight/Main/hero_land_soft.wav"
+dest_files=["res://.godot/imported/hero_land_soft.wav-d26846beda83682b56a333b838cf544d.sample"]
 
 [params]
 

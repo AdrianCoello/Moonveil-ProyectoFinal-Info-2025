@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c3wc6tlv5qag"
-path="res://.godot/imported/hero_walk_footsteps_stone.wav-7262263b21f61b8983a302e99faae612.sample"
+path="res://.godot/imported/hero_walk_footsteps_stone.wav-82fc94fa5d11aa5758748df9a74a235e.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_walk_footsteps_stone.wav"
-dest_files=["res://.godot/imported/hero_walk_footsteps_stone.wav-7262263b21f61b8983a302e99faae612.sample"]
+source_file="res://Audio/Knight/Others/hero_walk_footsteps_stone.wav"
+dest_files=["res://.godot/imported/hero_walk_footsteps_stone.wav-82fc94fa5d11aa5758748df9a74a235e.sample"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dkuoco4k71sam"
-path="res://.godot/imported/hero_dash.wav-703c0eabad8a2ae0e5575c54d157c28b.sample"
+path="res://.godot/imported/hero_dash.wav-0f4aab8a917bb9eb6877be93148b2b84.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Main/hero_dash.wav"
-dest_files=["res://.godot/imported/hero_dash.wav-703c0eabad8a2ae0e5575c54d157c28b.sample"]
+source_file="res://Audio/Knight/Main/hero_dash.wav"
+dest_files=["res://.godot/imported/hero_dash.wav-0f4aab8a917bb9eb6877be93148b2b84.sample"]
 
 [params]
 

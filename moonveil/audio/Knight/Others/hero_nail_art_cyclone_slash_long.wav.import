@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bpcecm4v7unlg"
-path="res://.godot/imported/hero_nail_art_cyclone_slash_long.wav-9b2dc72201b4b78d842746d5c75c0d8c.sample"
+path="res://.godot/imported/hero_nail_art_cyclone_slash_long.wav-7cc1646d535352b2ace1491f319c3bfb.sample"
 
 [deps]
 
-source_file="res://audio/Knight/Others/hero_nail_art_cyclone_slash_long.wav"
-dest_files=["res://.godot/imported/hero_nail_art_cyclone_slash_long.wav-9b2dc72201b4b78d842746d5c75c0d8c.sample"]
+source_file="res://Audio/Knight/Others/hero_nail_art_cyclone_slash_long.wav"
+dest_files=["res://.godot/imported/hero_nail_art_cyclone_slash_long.wav-7cc1646d535352b2ace1491f319c3bfb.sample"]
 
 [params]
 
