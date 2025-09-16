@@ -1,0 +1,39 @@
+# Godot 4 project ignore rules
+
+# Godot editor-generated
+.godot/
+.export/
+export/
+*.import@
+
+# Import cache and intermediate
+*.import
+*.engine.cfg
+*.translation
+
+# OS junk
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Archives / builds
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+*.pck
+*.wasm
+*.js
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# User/export presets (keep project.godot)
+export_presets.cfg
+
+# Local cache
+.cache/

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://ba3lghreiqu7n" path="res://scenes/horizontal_parallax.tscn" id="1_2cn2l"]
 [ext_resource type="PackedScene" uid="uid://civnvs6ycoxy8" path="res://scenes/portal.tscn" id="3_aepv2"]
+[ext_resource type="PackedScene" uid="uid://dupgy51rdgdqj" path="res://scenes/player1.tscn" id="5_p1wii"]
 [ext_resource type="PackedScene" uid="uid://dlbkmjr74ken1" path="res://scenes/parallax_background.tscn" id="5_rexx1"]
-[ext_resource type="PackedScene" uid="uid://crh6mn1fg1utf" path="res://scenes/player.tscn" id="8_imui8"]
 [ext_resource type="PackedScene" uid="uid://bbkkgh0kbxsmw" path="res://scenes/ground.tscn" id="9_xomvr"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6rxrb"]
@@ -63,9 +63,6 @@ tile_map_data = PackedByteArray("AAAAAAAAAQARAAoAAAARAAcAAQALABcAAAARAAYAAQALABY
 modulate = Color(1, 0.968627, 0.427451, 1)
 position = Vector2(3704, 656)
 
-[node name="player" parent="." instance=ExtResource("8_imui8")]
-position = Vector2(98, 542)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0.392157, 0.392157, 0.392157, 1)
 
@@ -101,7 +98,5 @@ shape = SubResource("RectangleShape2D_usd5o")
 offset = Vector2(4400, 0)
 transform = Transform2D(1, 0, 0, 1, 4400, 0)
 
-[connection signal="body_entered" from="spikes" to="player" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="spikes4" to="player" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="spikes2" to="player" method="_on_spikes_body_entered"]
-[connection signal="body_entered" from="spikes3" to="player" method="_on_spikes_body_entered"]
+[node name="player1" parent="." instance=ExtResource("5_p1wii")]
+position = Vector2(186, 542)
