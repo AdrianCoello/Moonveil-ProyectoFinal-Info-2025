@@ -2,9 +2,14 @@ extends CharacterBody2D
 
 const SPEED: float = 350.0
 const JUMP_VELOCITY: float = -450.0
+const CLIMB_SPEED: float = 180.0
+const MAX_HEALTH: int = 3
+const INVULN_TIME: float = 0.8
 
 var gravity: float = float(ProjectSettings.get_setting("physics/2d/default_gravity"))
 var fps: int = 60
+var is_climbing: bool = false
+var invuln_time_left: float = 0.0
 
 func _process(_delta: float) -> void:
 	# Mantener cámara siempre activa
@@ -32,20 +37,46 @@ func _process(_delta: float) -> void:
 	Engine.physics_ticks_per_second = fps
 
 func _physics_process(delta: float) -> void:
+	# Timers
+	if invuln_time_left > 0.0:
+		invuln_time_left -= delta
+		if invuln_time_left < 0.0:
+			invuln_time_left = 0.0
+
 	# Gravedad
-	if !is_on_floor():
+	if !is_on_floor() and !is_climbing:
 		velocity.y += gravity * delta
 
 	# Salto normal
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or is_climbing):
+		if is_climbing:
+			is_climbing = false
 		velocity.y = JUMP_VELOCITY
 		if has_node("Jump"):
 			$Jump.play()
 
+	# Escalada simple en pared (sin animación especial)
+	var climb_up := Input.is_action_pressed("ui_up")
+	var climb_down := Input.is_action_pressed("ui_down")
+	if is_on_wall() and (climb_up or climb_down):
+		is_climbing = true
+		velocity.y = -CLIMB_SPEED if climb_up else CLIMB_SPEED
+		velocity.x = 0.0
+	elif is_climbing:
+		# Mantenerse pegado si seguimos en pared; si no, salir de escalada
+		if is_on_wall():
+			velocity.y = 0.0
+		else:
+			is_climbing = false
+
 	# Movimiento lateral
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction != 0.0:
-		velocity.x = direction * SPEED
+		if is_climbing:
+			# Limitamos el movimiento horizontal durante escalada
+			velocity.x = 0.0
+		else:
+			velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0.0, SPEED)
 
@@ -72,10 +103,32 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
+# Sistema de daño/vida como player_1
+func take_damage(amount: int = 1) -> void:
+	if invuln_time_left > 0.0:
+		return
+	var new_health = max(0, get_health() - amount)
+	set_health(new_health)
+	if new_health <= 0:
+		die()
+		return
+	invuln_time_left = INVULN_TIME
+
+func get_health() -> int:
+	if not has_meta("health"):
+		set_meta("health", MAX_HEALTH)
+	return int(get_meta("health"))
+
+func set_health(v: int) -> void:
+	set_meta("health", clamp(v, 0, MAX_HEALTH))
+
+func die() -> void:
+	if has_node("hit"):
+		$hit.play()
+		await $hit.finished
+	get_tree().reload_current_scene()
+
 # Llamado por spikes (signal body_entered)
 func _on_spikes_body_entered(body: Node) -> void:
-	if body is CharacterBody2D:
-		if has_node("hit"):
-			$hit.play()
-			await $hit.finished
-		get_tree().reload_current_scene()
+	if body is CharacterBody2D and body == self:
+		die()

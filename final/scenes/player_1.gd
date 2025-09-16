@@ -1,14 +1,16 @@
 extends CharacterBody2D
 
-# Movimiento y combate
+# Core movimiento / combate
 const SPEED: float = 300.0
 const JUMP_VELOCITY: float = -400.0
 const ACCELERATION: float = 800.0
-const FRICTION: float = 600.0
+const FRICTION: float = 1400.0
+const GROUND_STOP_THRESHOLD: float = 30.0 # velocidad mínima para forzar parada en suelo
 const DASH_SPEED: float = 900.0
 const DASH_DURATION: float = 0.15
 const DASH_COOLDOWN: float = 0.3
 const ATTACK_LOCK_MOVE: bool = true
+const CLIMB_SPEED: float = 180.0
 const SLASH_DAMAGE: int = 1
 const SLASH_HITBOX_SIZE: Vector2 = Vector2(60, 40)
 const SLASH_HITBOX_OFFSET_X: float = 30.0
@@ -31,8 +33,9 @@ var is_attacking: bool = false
 var mouse_attack_down: bool = false
 var attack_time_left: float = 0.0
 var invuln_time_left: float = 0.0
+var is_climbing: bool = false
 
-# Nodos
+# Referencias nodos
 var animated_sprite: AnimatedSprite2D
 var camera: Camera2D
 var slash_hitbox: Area2D
@@ -142,13 +145,14 @@ func handle_timers(delta: float) -> void:
 			invuln_time_left = 0.0
 
 func handle_gravity(delta: float) -> void:
-	if not is_on_floor():
+	if not is_on_floor() and not is_climbing:
 		velocity.y += gravity * delta
 
 func handle_input(delta: float) -> void:
-	if (Input.is_action_just_pressed("ui_accept") or Input.is_key_pressed(KEY_SPACE)) and is_on_floor():
+	if (Input.is_action_just_pressed("ui_accept") or Input.is_key_pressed(KEY_SPACE)) and (is_on_floor() or is_climbing or is_on_wall()):
 		velocity.y = JUMP_VELOCITY
 		is_jumping = true
+		is_climbing = false
 		play_animation("jump")
 
 	var shift_down = Input.is_key_pressed(KEY_SHIFT)
@@ -161,6 +165,23 @@ func handle_input(delta: float) -> void:
 		start_attack()
 	mouse_attack_down = left_down
 	
+	# Escalada
+	var up_down := 0.0
+	if Input.is_key_pressed(KEY_W) or Input.is_action_pressed("ui_up"):
+		up_down = -1.0
+	elif Input.is_key_pressed(KEY_S) or Input.is_action_pressed("ui_down"):
+		up_down = 1.0
+
+	if is_on_wall() and up_down != 0.0 and not is_dashing:
+		is_climbing = true
+		velocity.y = up_down * CLIMB_SPEED
+		velocity.x = move_toward(velocity.x, 0.0, ACCELERATION * delta)
+	elif is_climbing:
+		if is_on_wall():
+			velocity.y = 0.0
+		else:
+			is_climbing = false
+
 	var input_dir = 0.0
 	if Input.is_key_pressed(KEY_A):
 		input_dir = -1.0
@@ -171,10 +192,14 @@ func handle_input(delta: float) -> void:
 		last_direction = input_dir
 		if (input_dir > 0 and not facing_right) or (input_dir < 0 and facing_right):
 			flip_character()
-		
-		velocity.x = move_toward(velocity.x, input_dir * SPEED, ACCELERATION * delta)
+		if is_climbing:
+			velocity.x = move_toward(velocity.x, 0.0, ACCELERATION * delta)
+		else:
+			velocity.x = move_toward(velocity.x, input_dir * SPEED, ACCELERATION * delta)
 	else:
 		velocity.x = move_toward(velocity.x, 0, FRICTION * delta)
+		if is_on_floor() and abs(velocity.x) < GROUND_STOP_THRESHOLD:
+			velocity.x = 0
 
 func handle_movement(delta: float) -> void:
 	var was_running = is_running
@@ -201,6 +226,7 @@ func flip_character():
 
 func start_dash():
 	is_dashing = true
+	is_climbing = false
 	dash_time_left = DASH_DURATION
 	dash_cooldown_left = DASH_COOLDOWN
 	var dir := 0.0
@@ -212,6 +238,19 @@ func start_dash():
 		dir = -1.0
 	velocity.x = dir * DASH_SPEED
 	play_animation("dash")
+	# Dash sync anim
+	if animated_sprite and animated_sprite.sprite_frames and animated_sprite.sprite_frames.has_animation("dash"):
+		var sf = animated_sprite.sprite_frames
+		var frames := 0
+		if sf.has_method("get_frame_count"):
+			frames = sf.get_frame_count("dash")
+		var speed := 0.0
+		if sf.has_method("get_animation_speed"):
+			speed = sf.get_animation_speed("dash")
+		if frames > 0 and speed > 0.0:
+			var anim_duration = float(frames) / speed
+			if anim_duration > 0.01:
+				dash_time_left = anim_duration
 
 func handle_dash(delta: float) -> void:
 	dash_time_left -= delta
@@ -327,7 +366,7 @@ func _on_spikes_body_entered(body: Node) -> void:
 		die()
 
 func update_animations(delta: float) -> void:
-	if is_dashing or is_attacking:
+	if is_dashing or is_attacking or is_climbing:
 		return
 	
 	if is_on_floor() and not is_jumping:

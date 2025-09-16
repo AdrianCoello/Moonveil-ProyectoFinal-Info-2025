@@ -99,4 +99,5 @@ offset = Vector2(4400, 0)
 transform = Transform2D(1, 0, 0, 1, 4400, 0)
 
 [node name="player1" parent="." instance=ExtResource("5_p1wii")]
-position = Vector2(186, 542)
+position = Vector2(52, 529)
+scale = Vector2(0.8, 0.8)

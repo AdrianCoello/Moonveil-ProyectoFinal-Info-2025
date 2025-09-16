@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpddm3qxpsjnh"]
+
+[ext_resource type="Script" uid="uid://d3kswlgb671f6" path="res://scenes/spikes.gd" id="1_vbq5w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muv8y"]
+size = Vector2(128, 32)
+
+[node name="spikes" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_vbq5w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_muv8y")
