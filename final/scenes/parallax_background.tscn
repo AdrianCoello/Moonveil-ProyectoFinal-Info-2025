@@ -1,0 +1,355 @@
+[gd_scene load_steps=7 format=3 uid="uid://dlbkmjr74ken1"]
+
+[ext_resource type="Texture2D" uid="uid://24edg7w7m7lt" path="res://assets/Mossy Assets/bgnd1.png" id="1_yqcdc"]
+[ext_resource type="Texture2D" uid="uid://dclrw7nssojc5" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - BackgroundDecoration.png" id="2_r7lvs"]
+[ext_resource type="Texture2D" uid="uid://bi6hnrlfjklmc" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - Decorations&Hazards.png" id="3_bpahb"]
+[ext_resource type="Texture2D" uid="uid://lqsdimn2gvj4" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - Hanging Plants.png" id="4_qs7dk"]
+[ext_resource type="Texture2D" uid="uid://hb2hloyrj0hs" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - MossyHills.png" id="5_2oy3k"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bpahb"]
+
+[node name="ParallaxBackground3" type="ParallaxBackground"]
+offset = Vector2(1900, 0)
+transform = Transform2D(1, 0, 0, 1, 1900, 0)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(29, 3)
+motion_scale = Vector2(0.3, 0.3)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(528, 328)
+texture = ExtResource("1_yqcdc")
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(-1113.75, 308)
+scale = Vector2(1.00275, 1)
+texture = ExtResource("1_yqcdc")
+
+[node name="Bgnd1" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(2167, 329)
+texture = ExtResource("1_yqcdc")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+top_level = true
+position = Vector2(91, 661)
+rotation = 1.5708
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_r7lvs")
+region_enabled = true
+region_rect = Rect2(17, 46, 1048, 4027)
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+position = Vector2(-3.00003, 33)
+rotation = 1.5708
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_r7lvs")
+region_enabled = true
+region_rect = Rect2(17, 46, 1048, 4027)
+
+[node name="Sprite2D11" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+position = Vector2(-1143, -136)
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_r7lvs")
+region_enabled = true
+region_rect = Rect2(17, 46, 1048, 4027)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+position = Vector2(2720, 602)
+rotation = -0.247837
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_r7lvs")
+region_enabled = true
+region_rect = Rect2(2396, 2361, 1686, 1725)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+position = Vector2(-6, 249)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(2396, 2361, 1686, 1725)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+position = Vector2(734, 283)
+rotation = -0.228638
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(2396, 2361, 1686, 1725)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D10" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+position = Vector2(-954, 193)
+rotation = 0.303687
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(2040, 2361, 2042, 1725)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+position = Vector2(2500, 674)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(233, 192, 1283, 706)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxLayer"]
+physics_interpolation_mode = 1
+position = Vector2(374, 602)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(87, 3077, 335, 440)
+region_filter_clip_enabled = true
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(646, 344)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_qs7dk")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(89, 1400, 465, 1374)
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(-814, 272)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_qs7dk")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(89, 1400, 465, 1374)
+
+[node name="Spite" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(2615, 264)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_qs7dk")
+region_enabled = true
+region_rect = Rect2(718, 1120, 1265, 1743)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer2"]
+physics_interpolation_mode = 1
+position = Vector2(1355, 152)
+rotation = 0.0959931
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_qs7dk")
+region_enabled = true
+region_rect = Rect2(114, 122, 362, 1175)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxLayer2"]
+physics_interpolation_mode = 1
+position = Vector2(1077, 655)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_r7lvs")
+region_enabled = true
+region_rect = Rect2(2384, 1410, 1682, 910)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxLayer2"]
+physics_interpolation_mode = 1
+position = Vector2(1921, 177)
+rotation = -3.16079
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(435, 1635, 917, 850)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxLayer2"]
+physics_interpolation_mode = 1
+position = Vector2(-1617, 288)
+rotation = -1.97571
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(2066, 972, 1225, 808)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxLayer2"]
+physics_interpolation_mode = 1
+material = SubResource("CanvasItemMaterial_bpahb")
+position = Vector2(-547, 301)
+rotation = -1.97571
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_bpahb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(2066, 972, 1225, 808)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxLayer2"]
+physics_interpolation_mode = 1
+position = Vector2(1418, 532)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(2893, 9, 1053, 915)
+region_filter_clip_enabled = true
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxLayer2"]
+physics_interpolation_mode = 1
+position = Vector2(1885, 622)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_bpahb")
+region_enabled = true
+region_rect = Rect2(1600, 3074, 401, 446)
+region_filter_clip_enabled = true
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(1248, 267)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_qs7dk")
+region_enabled = true
+region_rect = Rect2(89, 1400, 465, 1374)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(1048, 199)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_qs7dk")
+region_enabled = true
+region_rect = Rect2(89, 1400, 465, 1374)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(968, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_qs7dk")
+region_enabled = true
+region_rect = Rect2(89, 1400, 465, 1374)
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(1467, 753)
+rotation = -1.7017
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_r7lvs")
+region_enabled = true
+region_rect = Rect2(1194, 46, 1034, 2344)
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(-732, 722)
+rotation = 1.56207
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_r7lvs")
+flip_h = true
+flip_v = true
+region_enabled = true
+region_rect = Rect2(1194, 46, 1034, 2344)
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(2146, 719)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_r7lvs")
+region_enabled = true
+region_rect = Rect2(2384, 1410, 1682, 910)
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+z_index = 1
+position = Vector2(769, 731)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(63, 1510, 1324, 451)
+
+[node name="Sprite2D9" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(-1226, 652)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(63, 1510, 1324, 451)
+
+[node name="Sprite2D10" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(-1485, 649)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(63, 1510, 1324, 451)
+
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(2387, 811)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(63, 1510, 1324, 451)
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(1647, 238)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_qs7dk")
+region_enabled = true
+region_rect = Rect2(718, 1120, 458, 1743)
+
+[node name="Sprite2D7" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(2225, 127)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_qs7dk")
+region_enabled = true
+region_rect = Rect2(718, 1120, 458, 1743)
+
+[node name="Sprite2D8" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(2513, 214)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_qs7dk")
+region_enabled = true
+region_rect = Rect2(718, 1120, 458, 1743)
+
+[node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(1838, 769)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(689, 38, 1155, 487)
+
+[node name="Sprite2D11" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(-1721, 631)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(689, 38, 1155, 487)
+
+[node name="Sprite2D12" type="Sprite2D" parent="ParallaxLayer4"]
+z_index = 1
+position = Vector2(-1082, 748)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(689, 38, 1155, 487)
+
+[node name="Sprite2D3" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(418, 744)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(1456, 1581, 534, 423)
+
+[node name="Sprite2D4" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(1072, 806)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(1456, 1581, 534, 423)
+
+[node name="Sprite2D13" type="Sprite2D" parent="ParallaxLayer4"]
+physics_interpolation_mode = 1
+position = Vector2(2102, 839)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_2oy3k")
+region_enabled = true
+region_rect = Rect2(689, 38, 1155, 487)
