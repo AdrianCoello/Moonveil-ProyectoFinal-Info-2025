@@ -1,0 +1,190 @@
+[gd_scene load_steps=39 format=3 uid="uid://pqghyyhbmt4d"]
+
+[ext_resource type="Script" uid="uid://bwy272p5pjwb5" path="res://scenes/mantis_simple.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://be7pc8n83nltw" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0000.png" id="2_7b7on"]
+[ext_resource type="Texture2D" uid="uid://blxsppk4uxa16" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0001.png" id="3_igv3w"]
+[ext_resource type="Texture2D" uid="uid://ca7jwtbyow7d0" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0002.png" id="4_qwko7"]
+[ext_resource type="Texture2D" uid="uid://d2yur2mj8aeit" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0003.png" id="5_r56gl"]
+[ext_resource type="Texture2D" uid="uid://b26san6sm44s2" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0004.png" id="6_c07s6"]
+[ext_resource type="Texture2D" uid="uid://frlv25o5u6ob" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0005.png" id="7_1bfue"]
+[ext_resource type="Texture2D" uid="uid://bviqikdxm450f" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0006.png" id="8_bdfec"]
+[ext_resource type="Texture2D" uid="uid://x5ph7hp4ml0v" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0007.png" id="9_l4fpm"]
+[ext_resource type="Texture2D" uid="uid://671dgptp3bvf" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0008.png" id="10_yyos5"]
+[ext_resource type="Texture2D" uid="uid://dh07lml5o18ri" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0009.png" id="11_l7ydb"]
+[ext_resource type="Texture2D" uid="uid://b554e744fchv8" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0010.png" id="12_uxr6b"]
+[ext_resource type="Texture2D" uid="uid://cp5rkxat415o2" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0011.png" id="13_n52cg"]
+[ext_resource type="Texture2D" uid="uid://5ag8qic5npgf" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0012.png" id="14_q3aca"]
+[ext_resource type="Texture2D" uid="uid://b6n5i54wpp0a2" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0013.png" id="15_6j2vj"]
+[ext_resource type="Texture2D" uid="uid://bpsgkw5p58x84" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0014.png" id="16_xxjot"]
+[ext_resource type="Texture2D" uid="uid://dos21rmbhik1m" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0015.png" id="17_1vv7e"]
+[ext_resource type="Texture2D" uid="uid://l42gdhny41sm" path="res://assets/enemy_mantis/Mantis Heavy Cln_attack0016.png" id="18_s67ig"]
+[ext_resource type="Texture2D" uid="uid://db6wukcdmcpth" path="res://assets/enemy_mantis/Mantis Heavy Cln_death0000.png" id="19_v1ree"]
+[ext_resource type="Texture2D" uid="uid://cntwyjlia5r48" path="res://assets/enemy_mantis/Mantis Heavy Cln_death0001.png" id="20_7m777"]
+[ext_resource type="Texture2D" uid="uid://da5b1p7gwt2ts" path="res://assets/enemy_mantis/Mantis Heavy Cln_death0002.png" id="21_6xhig"]
+[ext_resource type="Texture2D" uid="uid://1lixhlshhwnh" path="res://assets/enemy_mantis/Mantis Heavy Cln_idle0000.png" id="22_8uf84"]
+[ext_resource type="Texture2D" uid="uid://bh6hhnytrtulr" path="res://assets/enemy_mantis/Mantis Heavy Cln_idle0001.png" id="23_bd6gb"]
+[ext_resource type="Texture2D" uid="uid://2q3d644ib8tn" path="res://assets/enemy_mantis/Mantis Heavy Cln_idle0002.png" id="24_r4ist"]
+[ext_resource type="Texture2D" uid="uid://d0dgtuupotrqg" path="res://assets/enemy_mantis/Mantis Heavy Cln_idle0003.png" id="25_wqewd"]
+[ext_resource type="Texture2D" uid="uid://8568jlhpwnlw" path="res://assets/enemy_mantis/Mantis Heavy Cln_idle0004.png" id="26_7g1w7"]
+[ext_resource type="Texture2D" uid="uid://qv6yd226qvlp" path="res://assets/enemy_mantis/Mantis Heavy Cln_idle0005.png" id="27_r87yv"]
+[ext_resource type="Texture2D" uid="uid://driljm6jgaabp" path="res://assets/enemy_mantis/Mantis Heavy Cln_idle0006.png" id="28_qmji1"]
+[ext_resource type="Texture2D" uid="uid://ff3o6rkiwp1t" path="res://assets/enemy_mantis/Mantis Heavy Cln_walk0000.png" id="29_ceakq"]
+[ext_resource type="Texture2D" uid="uid://n401h1cb2xio" path="res://assets/enemy_mantis/Mantis Heavy Cln_walk0001.png" id="30_hjrsg"]
+[ext_resource type="Texture2D" uid="uid://byqjeypxnjuft" path="res://assets/enemy_mantis/Mantis Heavy Cln_walk0002.png" id="31_v3hlo"]
+[ext_resource type="Texture2D" uid="uid://7mc6cv5gxsl3" path="res://assets/enemy_mantis/Mantis Heavy Cln_walk0003.png" id="32_30bld"]
+[ext_resource type="Texture2D" uid="uid://rlvdw6qiy2iu" path="res://assets/enemy_mantis/Mantis Heavy Cln_walk0004.png" id="33_yq867"]
+[ext_resource type="Texture2D" uid="uid://ctlnt000d36e4" path="res://assets/enemy_mantis/Mantis Heavy Cln_walk0005.png" id="34_tpiiw"]
+[ext_resource type="Texture2D" uid="uid://d326f0fo8e04q" path="res://assets/enemy_mantis/Mantis Heavy Cln_walk0006.png" id="35_kvpw1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_simple"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_7b7on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_igv3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qwko7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r56gl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c07s6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1bfue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bdfec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_l4fpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yyos5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l7ydb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_uxr6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_n52cg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q3aca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_6j2vj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xxjot")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_1vv7e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_s67ig")
+}],
+"loop": false,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_v1ree")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7m777")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6xhig")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_8uf84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_bd6gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_r4ist")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_wqewd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_7g1w7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_r87yv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qmji1")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_ceakq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_hjrsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_v3hlo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_30bld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_yq867")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tpiiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_kvpw1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(194.25, 292.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7b7on"]
+size = Vector2(226, 186)
+
+[node name="MantisEnemySimple" type="CharacterBody2D"]
+script = ExtResource("1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_simple")
+animation = &"Attack"
+frame = 16
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8.5, 6.5)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="AttackHitbox" type="Area2D" parent="."]
+collision_layer = 65531
+collision_mask = 65533
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackHitbox"]
+position = Vector2(121, 51)
+shape = SubResource("RectangleShape2D_7b7on")
+debug_color = Color(1, 0.318577, 0.303796, 0.42)

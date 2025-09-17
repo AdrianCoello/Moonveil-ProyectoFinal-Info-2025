@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://dupgy51rdgdqj"]
+[gd_scene load_steps=66 format=3 uid="uid://dupgy51rdgdqj"]
 
 [ext_resource type="Texture2D" uid="uid://bgysmhsnsxeeo" path="res://assets/SpritesNewKnight/Idle/Idle_001.png" id="1_igli2"]
 [ext_resource type="Script" uid="uid://bkbdpqtj3xrjy" path="res://scenes/player_1.gd" id="1_r8eml"]
@@ -295,7 +295,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qir2g"]
-size = Vector2(28, 73)
+size = Vector2(20, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8eml"]
+size = Vector2(41, 56.75)
 
 [node name="player1" type="CharacterBody2D"]
 position = Vector2(1, -56)
@@ -310,5 +313,14 @@ frame = 14
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 43)
+position = Vector2(2, 40)
 shape = SubResource("RectangleShape2D_qir2g")
+
+[node name="Hurtbox" type="Area2D" parent="."]
+position = Vector2(3, 43)
+collision_layer = 65533
+collision_mask = 65535
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(-6, -6)
+shape = SubResource("RectangleShape2D_r8eml")

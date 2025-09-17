@@ -40,29 +40,43 @@ var animated_sprite: AnimatedSprite2D
 var camera: Camera2D
 var slash_hitbox: Area2D
 var slash_shape: CollisionShape2D
+var health_ui: Label
 
 # Animación
 var current_animation: String = "idle"
 
 func _ready():
-	animated_sprite = find_sprite_node()
-	
-	if not animated_sprite:
-		print("Error: No se encontró AnimatedSprite2D")
-		return
-	else:
-		print("AnimatedSprite2D: ", animated_sprite.name)
-	
-	setup_camera()
-	
-	play_animation("idle")
-	if animated_sprite:
-		animated_sprite.flip_h = facing_right
-		var cb := Callable(self, "_on_animation_finished")
-		if not animated_sprite.animation_finished.is_connected(cb):
-			animated_sprite.animation_finished.connect(cb)
+		animated_sprite = find_sprite_node()
 
-	setup_slash_hitbox()
+		if not animated_sprite:
+			print("Error: No se encontró AnimatedSprite2D")
+			return
+		else:
+			print("AnimatedSprite2D: ", animated_sprite.name)
+
+		setup_camera()
+		setup_health_ui()
+
+		play_animation("idle")
+		if animated_sprite:
+			animated_sprite.flip_h = facing_right
+			var cb := Callable(self, "_on_animation_finished")
+			if not animated_sprite.animation_finished.is_connected(cb):
+				animated_sprite.animation_finished.connect(cb)
+
+		setup_slash_hitbox()
+
+		# Conectar señal de Hurtbox
+		if has_node("Hurtbox"):
+			var hurtbox = $Hurtbox
+			var cb2 := Callable(self, "_on_hurtbox_body_entered")
+			if not hurtbox.body_entered.is_connected(cb2):
+				hurtbox.body_entered.connect(cb2)
+func _on_hurtbox_body_entered(body: Node) -> void:
+	if body == self:
+		return
+	if body.name == "AttackHitbox" or body.is_in_group("enemy_attack"):
+		take_damage(1)
 
 func setup_camera():
 	camera = find_camera_node()
@@ -321,6 +335,20 @@ func setup_slash_hitbox() -> void:
 	if not slash_hitbox.body_entered.is_connected(cb):
 		slash_hitbox.body_entered.connect(cb)
 
+func setup_health_ui() -> void:
+	health_ui = Label.new()
+	health_ui.name = "HealthUI"
+	health_ui.text = "HP: " + str(get_health()) + "/" + str(MAX_HEALTH)
+	health_ui.position = Vector2(10, 10)
+	health_ui.z_index = 100
+
+	# Añadir a un CanvasLayer para que se mantenga en pantalla
+	var canvas_layer = CanvasLayer.new()
+	canvas_layer.name = "UI_Layer"
+	# Usar call_deferred para evitar error de jerarquía
+	get_tree().current_scene.call_deferred("add_child", canvas_layer)
+	canvas_layer.call_deferred("add_child", health_ui)
+
 func activate_slash_hitbox() -> void:
 	var dir_x := 1.0 if facing_right else -1.0
 	slash_hitbox.position = Vector2(dir_x * SLASH_HITBOX_OFFSET_X, 0)
@@ -345,6 +373,8 @@ func take_damage(amount: int = 1) -> void:
 		return
 	var new_health = max(0, get_health() - amount)
 	set_health(new_health)
+	update_health_ui()
+	print("Player toma daño. Vida: ", new_health, "/", MAX_HEALTH)
 	if new_health <= 0:
 		die()
 		return
@@ -359,7 +389,12 @@ func set_health(v: int) -> void:
 	set_meta("health", clamp(v, 0, MAX_HEALTH))
 
 func die() -> void:
+	print("¡Player muerto! Reiniciando escena...")
 	get_tree().reload_current_scene()
+
+func update_health_ui() -> void:
+	if health_ui:
+		health_ui.text = "HP: " + str(get_health()) + "/" + str(MAX_HEALTH)
 
 func _on_spikes_body_entered(body: Node) -> void:
 	if body is CharacterBody2D and body == self:

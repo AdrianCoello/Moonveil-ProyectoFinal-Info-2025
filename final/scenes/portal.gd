@@ -9,4 +9,4 @@ func _on_body_entered(body: Node) -> void:
 		if has_node("sound"):
 			$sound.play()
 			await $sound.finished
-		get_tree().change_scene_to_file("res://scenes/final.tscn")
+		get_tree().change_scene_to_file("res://scenes/mantis_boss_arena.tscn")

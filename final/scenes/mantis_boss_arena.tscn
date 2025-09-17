@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3lun3vmdqi3u"]
+
+[ext_resource type="PackedScene" uid="uid://dupgy51rdgdqj" path="res://scenes/player1.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://pqghyyhbmt4d" path="res://scenes/mantis_simple.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://ba3lghreiqu7n" path="res://scenes/horizontal_parallax.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bbkkgh0kbxsmw" path="res://scenes/ground.tscn" id="4"]
+
+[node name="MantisBossArena" type="Node2D"]
+
+[node name="VictoryMessage" type="Label" parent="."]
+visible = false
+offset_left = 500.0
+offset_top = 200.0
+offset_right = 500.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "¡Ganaste!"
+
+[node name="horizontalParallax" parent="." instance=ExtResource("3")]
+
+[node name="ground" parent="." instance=ExtResource("4")]
+position = Vector2(9, 560)
+
+[node name="player1" parent="." instance=ExtResource("1")]
+position = Vector2(132, 1049)
+
+[node name="MantisEnemySimple" parent="." instance=ExtResource("2")]
+position = Vector2(876, 1061)

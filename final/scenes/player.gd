@@ -12,6 +12,11 @@ var is_climbing: bool = false
 var invuln_time_left: float = 0.0
 
 func _process(_delta: float) -> void:
+	# Fuerza la capa de colisión del jugador a 1
+	if has_node("CollisionShape2D"):
+		self.set_collision_layer_value(1, true)
+		for i in range(2, 21):
+			self.set_collision_layer_value(i, false)
 	# Mantener cámara siempre activa
 	if has_node("Camera2D"):
 		$Camera2D.make_current()
@@ -105,6 +110,7 @@ func _physics_process(delta: float) -> void:
 
 # Sistema de daño/vida como player_1
 func take_damage(amount: int = 1) -> void:
+	print("¡Jugador recibe daño!", amount)
 	if invuln_time_left > 0.0:
 		return
 	var new_health = max(0, get_health() - amount)
