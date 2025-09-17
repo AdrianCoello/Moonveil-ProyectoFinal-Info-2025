@@ -298,10 +298,11 @@ animations = [{
 size = Vector2(20, 62)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8eml"]
-size = Vector2(41, 56.75)
+size = Vector2(34, 94)
 
 [node name="player1" type="CharacterBody2D"]
 position = Vector2(1, -56)
+disable_mode = 2
 script = ExtResource("1_r8eml")
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
@@ -318,9 +319,10 @@ shape = SubResource("RectangleShape2D_qir2g")
 
 [node name="Hurtbox" type="Area2D" parent="."]
 position = Vector2(3, 43)
-collision_layer = 65533
-collision_mask = 65535
+disable_mode = 2
+collision_layer = 65284
+collision_mask = 65281
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(-6, -6)
+position = Vector2(-5, -15)
 shape = SubResource("RectangleShape2D_r8eml")

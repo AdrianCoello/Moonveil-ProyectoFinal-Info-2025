@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-# --- Configuración básica ---
+
 const SPEED: float = 150.0
 const MAX_HEALTH: int = 3
 const ATTACK_RANGE: float = 150.0
@@ -22,7 +22,7 @@ func _ready():
 		animated_sprite.play("idle")
 	if $AttackHitbox:
 		$AttackHitbox.monitoring = false
-		# Fuerza la máscara de colisión del hitbox solo a la capa 1
+		
 		for i in range(1, 21):
 			$AttackHitbox.set_collision_mask_value(i, i == 1)
 		if not $AttackHitbox.body_entered.is_connected(self._on_AttackHitbox_body_entered):
@@ -33,21 +33,21 @@ func _physics_process(delta):
 		return
 	if player_ref:
 		var dir = sign(player_ref.global_position.x - global_position.x)
-		# Solo se mueve si no está atacando
+		
 		if not is_attacking:
 			velocity.x = dir * SPEED
 		else:
 			velocity.x = 0
-		# Ajusta el flip y la posición del hitbox de ataque
+		
 		if animated_sprite:
 			animated_sprite.flip_h = dir < 0
-		# Mueve el hitbox delante de la mantis según la dirección
+		
 		if $AttackHitbox:
 			var offset = Vector2(55, 19)
 			if dir < 0:
 				offset.x *= -1
 			$AttackHitbox.position = offset
-		# Animación: solo cambia si no está atacando
+		
 		if animated_sprite:
 			if is_attacking:
 				if animated_sprite.animation != "Attack":
@@ -70,7 +70,7 @@ func _physics_process(delta):
 func start_attack():
 	is_attacking = true
 	can_attack = false
-	# Duración igual a la animación de ataque (17 frames a 5 fps = 3.4s, pero puedes ajustar)
+	
 	attack_timer = 17.0 / 5.0
 	if $AttackHitbox:
 		$AttackHitbox.monitoring = true
@@ -80,6 +80,11 @@ func finish_attack():
 	is_attacking = false
 	if $AttackHitbox:
 		$AttackHitbox.monitoring = false
+	# --- Daño por proximidad ---
+	if player_ref and global_position.distance_to(player_ref.global_position) < ATTACK_RANGE:
+		if player_ref.has_method("take_damage"):
+			player_ref.take_damage(ATTACK_DAMAGE)
+			print("[Mantis] Daño por proximidad aplicado al jugador!")
 	await get_tree().create_timer(ATTACK_COOLDOWN).timeout
 	can_attack = true
 
@@ -106,7 +111,20 @@ func take_damage(amount: int = 1) -> void:
 		queue_free()
 
 func _on_AttackHitbox_body_entered(body):
+	print("[Mantis] body_entered: ", body, " type: ", typeof(body), " name: ", body.name)
 	if body == self:
+		print("[Mantis] Ignorado: es self")
 		return
-	if is_attacking and body and body is CharacterBody2D and body.has_method("take_damage"):
-		body.take_damage(ATTACK_DAMAGE)
+	if is_attacking and body:
+		var current = body
+		var found = false
+		while current:
+			print("[Mantis] Revisando nodo: ", current, " type: ", typeof(current), " name: ", current.name)
+			if current.has_method("take_damage"):
+				print("[Mantis] ¡Daño aplicado a: ", current, "!")
+				current.take_damage(ATTACK_DAMAGE)
+				found = true
+				break
+			current = current.get_parent()
+		if not found:
+			print("[Mantis] No se encontró ningún nodo con take_damage en la jerarquía.")

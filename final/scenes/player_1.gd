@@ -5,7 +5,7 @@ const SPEED: float = 300.0
 const JUMP_VELOCITY: float = -400.0
 const ACCELERATION: float = 800.0
 const FRICTION: float = 1400.0
-const GROUND_STOP_THRESHOLD: float = 30.0 # velocidad mínima para forzar parada en suelo
+const GROUND_STOP_THRESHOLD: float = 30.0 
 const DASH_SPEED: float = 900.0
 const DASH_DURATION: float = 0.15
 const DASH_COOLDOWN: float = 0.3
@@ -252,7 +252,7 @@ func start_dash():
 		dir = -1.0
 	velocity.x = dir * DASH_SPEED
 	play_animation("dash")
-	# Dash sync anim
+	
 	if animated_sprite and animated_sprite.sprite_frames and animated_sprite.sprite_frames.has_animation("dash"):
 		var sf = animated_sprite.sprite_frames
 		var frames := 0
@@ -342,10 +342,10 @@ func setup_health_ui() -> void:
 	health_ui.position = Vector2(10, 10)
 	health_ui.z_index = 100
 
-	# Añadir a un CanvasLayer para que se mantenga en pantalla
+	
 	var canvas_layer = CanvasLayer.new()
 	canvas_layer.name = "UI_Layer"
-	# Usar call_deferred para evitar error de jerarquía
+	
 	get_tree().current_scene.call_deferred("add_child", canvas_layer)
 	canvas_layer.call_deferred("add_child", health_ui)
 
